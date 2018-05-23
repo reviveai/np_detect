@@ -1,0 +1,70 @@
+#cv2
+１、opencvの再インストール
+pip uninstall opencv-python の後に
+pip install opencv-python
+２、管理者権限で実行する
+
+
+#pip unicode error
+>chcp
+現在のコード ページ: 932
+chcpコマンドで「932」と表示されたら文字コードは「ShiftJIS」になっています。
+
+２）コマンドプロンプトの文字コードを変更する
+chcpコマンドで「65001」を指定すると文字コードを「UTF-8」に変更できます。
+
+>chcp 65001
+Active code page: 65001
+
+
+https://qiita.com/ruteshi_SI_shiteru/items/be6a58276bdbd67dc096
+
+
+compat\__init__.py
+import os
+import sys
+import locale
+
+
+
+#cocotool api
+
+need VS build tool
+
+pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+
+or
+
+pip install --upgrade git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+
+
+
+
+
+
+# Load a random image from the images folder
+file_names = next(os.walk(IMAGE_DIR))[2]
+
+filename = os.path.join(IMAGE_DIR, 'nakajyo.jpg')
+# image = skimage.io.imread(os.path.join(IMAGE_DIR, random.choice(file_names)))
+image = skimage.io.imread(filename)
+
+# Run detection
+results = model.detect([image], verbose=1)
+
+# Visualize results
+r = results[0]
+visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'],
+                            class_names, r['scores'])
+
+
+
+OSError cant open file
+
+https://github.com/adamheins/keras-h5py-truncated-file-debug
+
+
+https://github.com/matterport/Mask_RCNN/releases
+ここから.h5 ファイルをダウンロード
+利用するtrained model が違うから
+mask_rcnn_coco.h5
