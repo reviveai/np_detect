@@ -178,3 +178,11 @@ min max を調整することで精度に影響
 np_train (50).jpgの右
 
 512はトレーニングするときの設定値だったので、一番適性がいい
+
+## LOGGING処理
+面倒くさいから、printをそのままlogファイルに書き込む
+https://stackoverflow.com/questions/2513479/redirect-prints-to-log-file
+
+もしくは正しいやり方で
+import logging
+https://docs.python.jp/3/howto/logging.html
