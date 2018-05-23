@@ -186,3 +186,15 @@ https://stackoverflow.com/questions/2513479/redirect-prints-to-log-file
 もしくは正しいやり方で
 import logging
 https://docs.python.jp/3/howto/logging.html
+
+例：
+import logging
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                        format="%(asctime)-15s %(levelname)-8s %(message)s")
+    logging.info("hello")
+
+Produce a file named "logfile" with content:
+
+2012-10-18 06:40:03,582 INFO     hello

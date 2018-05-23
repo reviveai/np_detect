@@ -2450,9 +2450,9 @@ class MaskRCNN():
             images) == self.config.BATCH_SIZE, "len(images) must be equal to BATCH_SIZE"
 
         if verbose:
-            log("LOGGING:::::: Processing {} images".format(len(images)))
+            logging.info("LOGGING:::::: Processing {} images".format(len(images)))
             for image in images:
-                log("LOGGING:::::: image", image)
+                logging.info("LOGGING:::::: image %s", image.shape)
 
         # Mold inputs to format expected by the neural network
         molded_images, image_metas, windows = self.mold_inputs(images)
@@ -2471,9 +2471,9 @@ class MaskRCNN():
         anchors = np.broadcast_to(anchors, (self.config.BATCH_SIZE,) + anchors.shape)
 
         if verbose:
-            log("LOGGING:::::: molded_images", molded_images)
-            log("LOGGING:::::: image_metas", image_metas)
-            log("LOGGING:::::: anchors", anchors)
+            logging.info("LOGGING:::::: molded_images %s", molded_images.shape)
+            logging.info("LOGGING:::::: image_metas %s", image_metas.shape)
+            logging.info("LOGGING:::::: anchors %s", anchors.shape)
         # Run object detection
         detections, _, _, mrcnn_mask, _, _, _ =\
             self.keras_model.predict([molded_images, image_metas, anchors], verbose=0)
@@ -2511,9 +2511,9 @@ class MaskRCNN():
             "Number of images must be equal to BATCH_SIZE"
 
         if verbose:
-            log("LOGGING:::::: Processing {} images".format(len(molded_images)))
+            logging.info("LOGGING:::::: Processing {} images".format(len(molded_images)))
             for image in molded_images:
-                log("LOGGING:::::: image", image)
+                logging.info("LOGGING:::::: image %s", image.shape)
 
         # Validate image sizes
         # All images in a batch MUST be of the same size
@@ -2528,9 +2528,9 @@ class MaskRCNN():
         anchors = np.broadcast_to(anchors, (self.config.BATCH_SIZE,) + anchors.shape)
 
         if verbose:
-            log("LOGGING:::::: molded_images", molded_images)
-            log("LOGGING:::::: image_metas", image_metas)
-            log("LOGGING:::::: anchors", anchors)
+            logging.info("LOGGING:::::: molded_images %s", molded_images.shape)
+            logging.info("LOGGING:::::: image_metas %s", image_metas.shape)
+            logging.info("LOGGING:::::: anchors %s", anchors.shape)
         # Run object detection
         detections, _, _, mrcnn_mask, _, _, _ =\
             self.keras_model.predict([molded_images, image_metas, anchors], verbose=0)
