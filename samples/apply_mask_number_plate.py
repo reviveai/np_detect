@@ -13,7 +13,8 @@ import matplotlib.patches as patches
 import imghdr
 import cv2
 import skimage.io
-
+import logging
+import argparse
 
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../")
@@ -66,7 +67,7 @@ def apply_mask_to_image(config_name,weights_name):
     # Load pre-trained weights
     NUMBERPLATE_WEIGHTS_FILE = os.path.join(NUMBERPLATE_WEIGHTS_PATH, weights_name)
     model.load_weights(NUMBERPLATE_WEIGHTS_FILE, by_name=True)
-    print('LOGGING:::::: %s weights file loaded.'%args.weights)
+    logging.info('%s weights file loaded.'%args.weights)
 
     # Validation images extension
     image_type_ok_list = ['jpeg','png','gif','bmp']
@@ -79,27 +80,26 @@ def apply_mask_to_image(config_name,weights_name):
             if image_type in image_type_ok_list:
                 # Start
                 file_count +=1
-                print('LOGGING:::::: Counting', file_count)
-                print('LOGGING:::::: Start')
+                logging.info('Counting %d start' % file_count)
 
                 # Date time log
                 img_timestamp = time.localtime()
                 date_string = str.join('/',(str(img_timestamp.tm_year), str(img_timestamp.tm_mon).zfill(2), str(img_timestamp.tm_mday).zfill(2)))
                 time_string = str.join(':',(str(img_timestamp.tm_hour).zfill(2),str(img_timestamp.tm_min).zfill(2),str(img_timestamp.tm_sec).zfill(2)))
-                print('LOGGING:::::: Date Time:', date_string, time_string)
+                logging.info('Date Time: %s %s', date_string, time_string)
 
                 # Filename and filepath log
                 filename = os.path.join(IMAGE_DIR, file_names)
-                print('LOGGING:::::: Loading image:',file_names)
+                logging.info('Loading image: %s', file_names)
 
                 base_file_name = os.path.basename(filename)
                 base_dir_name = os.path.dirname(filename)
-                print('LOGGING:::::: Dir name:',base_dir_name)
-                print('LOGGING:::::: File name:',base_file_name)
+                logging.info('Dir name: %s',base_dir_name)
+                logging.info('File name: %s',base_file_name)
                 split_file_name, split_file_ext = os.path.splitext(base_file_name)
                 saved_dir_name = 'masked'
                 saved_file_name = str.join('\\', (base_dir_name, saved_dir_name, base_file_name))
-                print('LOGGING:::::: Saved as:',saved_file_name)
+                logging.info('Saved as: %s',saved_file_name)
 
                 # Convert png with alpha channel with shape[2] == 4 into shape[2] ==3 RGB images
                 image = skimage.io.imread(filename)
@@ -114,18 +114,19 @@ def apply_mask_to_image(config_name,weights_name):
                 r = results[0]
 
                 # Without displaying images for batch program
-                ###print_img = visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
-                ###skimage.io.imsave(saved_file_name,print_img)
+                ###logging.info_img = visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
+                ###skimage.io.imsave(saved_file_name,logging.info_img)
 
                 # Just apply mask then save images
-                print_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
-                skimage.io.imsave(saved_file_name,print_img)
+                logging.info_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
+                skimage.io.imsave(saved_file_name,logging.info_img)
 
                 # Processing time log
                 t1 = time.perf_counter()
-                print('LOGGING:::::: Completed 1 image in %f sec'%(t1-t0))
-                print('LOGGING:::::: End\n')
+                logging.info('Completed 1 image in %f sec',(t1-t0))
+                logging.info('End')
                 # End
+    return True
 
 ############################################################
 #  __main__
@@ -133,7 +134,9 @@ def apply_mask_to_image(config_name,weights_name):
 #  python apply_mask_number_plate.py --weights=mask_rcnn_numberplate.h5
 ############################################################
 if __name__ == '__main__':
-    import argparse
+    # Logging confg
+    logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 
     # Parse command line arguments
     parser = argparse.ArgumentParser(
@@ -145,9 +148,18 @@ if __name__ == '__main__':
 
     # Validate arguments
     if args.weights == None:
-        print('FATAL ERROR:::::: %s weights file not found.'%args.weights)
+        logging.exception(' %s weights file not found.', args.weights)
     else:
         config = InferenceConfig()
         config.display()
+        batch_result = apply_mask_to_image(config, args.weights)
 
-        apply_mask_to_image(config, args.weights)
+    if batch_result == True:
+        result_timestamp = time.localtime()
+        date_string = str.join('/',(str(result_timestamp.tm_year), str(result_timestamp.tm_mon).zfill(2), str(result_timestamp.tm_mday).zfill(2)))
+        time_string = str.join(':',(str(result_timestamp.tm_hour).zfill(2),str(result_timestamp.tm_min).zfill(2),str(result_timestamp.tm_sec).zfill(2)))
+        logging.info('FINISHING..................................')
+        logging.info('All image file masking completed.Batch ended at: %s %s', date_string, time_string)
+    else:
+        logging.info('FINISHING..................................')
+        logging.exception('Batch ended with exception. Please check logs.')
