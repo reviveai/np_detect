@@ -31,6 +31,8 @@ config.py num_class= 1+ ??? class number
 coco is 1+80
 calpis is 1+1
 
+https://github.com/matterport/Mask_RCNN/issues/372
+
 
 
 
