@@ -108,11 +108,12 @@ class NumberPlateDataset(utils.Dataset):
             #    multi_numbers = [r['region_attributes']]
                 # print("multi_numbers=", multi_numbers)
             polygons = [r['shape_attributes'] for r in a['regions'].values()]
-            objects = [s['region_attributes'] for s in a['regions'].values()]
+
+            objects = [s['region_attributes'] for s in a['regions'].values()]   # 读取objects 从json
             # print("multi_numbers=", multi_numbers)
             # num_ids = [n for n in multi_numbers['number'].values()]
             # for n in multi_numbers:
-            num_ids = [int(n['object']) for n in objects]
+            num_ids = [int(n['object']) for n in objects]  # 读取objects的class id (num_ids)
             # print("num_ids=", num_ids)
             # print("num_ids_new=", num_ids_new)
             # categories = [s['region_attributes'] for s in a['regions'].values()]
@@ -129,7 +130,7 @@ class NumberPlateDataset(utils.Dataset):
                 path=image_path,
                 width=width, height=height,
                 polygons=polygons,
-                num_ids=num_ids)
+                num_ids=num_ids)  # 添加一个参数 把num ids 也加到图片dataset里
 
 
     def load_mask(self, image_id):
@@ -155,7 +156,7 @@ class NumberPlateDataset(utils.Dataset):
             mask[rr, cc, i] = 1
         # print("info['num_ids']=", info['num_ids'])
         # Map class names to class IDs.
-        num_ids = np.array(num_ids, dtype=np.int32)
+        num_ids = np.array(num_ids, dtype=np.int32)  # balloon模型里是默认1个class 默认是1 这里返回多个class id的num_ids
         return mask, num_ids
 
     def image_reference(self, image_id):
