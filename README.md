@@ -22,6 +22,10 @@ python calpis.py train --dataset=../../datasets/calpis --weights=coco
 python {name_of_the_sample_project}.py train --dataset=../../datasets/{name_of_the_sample_project} --weights=coco or imagenet
 
 
+## batch run
+
+python apply_mask_number_plate.py --weights=mask_rcnn_numberplate.h5
+
 **resume training**
 python calpis.py train --dataset=../../datasets/calpis --weights=last
 
