@@ -1,0 +1,240 @@
+2018-05-23 18:00:40,912 INFO     ../weights/mask_rcnn_numberplate.h5 weights file loaded.
+2018-05-23 18:00:40,913 INFO     Counting 1 start
+2018-05-23 18:00:40,913 INFO     Date Time: 2018/05/23 18:00:40
+2018-05-23 18:00:40,913 INFO     Loading image: <DirEntry '3D-007.jpg'>
+2018-05-23 18:00:40,914 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:00:40,914 INFO     File name: 3D-007.jpg
+2018-05-23 18:00:40,914 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\3D-007.jpg
+2018-05-23 18:00:40,949 INFO     Processing 1 images
+2018-05-23 18:00:40,949 INFO     image (478, 640, 3)
+2018-05-23 18:00:41,037 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:00:41,037 INFO     image_metas (1, 14)
+2018-05-23 18:00:41,038 INFO     anchors (1, 65472, 4)
+2018-05-23 18:00:50,658 INFO     Completed 1 image in 9.709224 sec
+2018-05-23 18:00:50,659 INFO     End
+2018-05-23 18:00:50,659 INFO     Counting 2 start
+2018-05-23 18:00:50,660 INFO     Date Time: 2018/05/23 18:00:50
+2018-05-23 18:00:50,660 INFO     Loading image: <DirEntry '58f02a79eda1d_193532217.jpg'>
+2018-05-23 18:00:50,660 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:00:50,660 INFO     File name: 58f02a79eda1d_193532217.jpg
+2018-05-23 18:00:50,660 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\58f02a79eda1d_193532217.jpg
+2018-05-23 18:00:50,669 INFO     Processing 1 images
+2018-05-23 18:00:50,669 INFO     image (391, 746, 3)
+2018-05-23 18:00:50,750 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:00:50,750 INFO     image_metas (1, 14)
+2018-05-23 18:00:50,750 INFO     anchors (1, 65472, 4)
+2018-05-23 18:00:57,291 INFO     Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image
+2018-05-23 18:00:57,415 INFO     Completed 1 image in 6.746658 sec
+2018-05-23 18:00:57,416 INFO     End
+2018-05-23 18:00:57,417 INFO     Counting 3 start
+2018-05-23 18:00:57,417 INFO     Date Time: 2018/05/23 18:00:57
+2018-05-23 18:00:57,417 INFO     Loading image: <DirEntry 'fp02.jpg'>
+2018-05-23 18:00:57,417 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:00:57,417 INFO     File name: fp02.jpg
+2018-05-23 18:00:57,417 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\fp02.jpg
+2018-05-23 18:00:57,424 INFO     Processing 1 images
+2018-05-23 18:00:57,424 INFO     image (408, 612, 3)
+2018-05-23 18:00:57,499 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:00:57,499 INFO     image_metas (1, 14)
+2018-05-23 18:00:57,499 INFO     anchors (1, 65472, 4)
+2018-05-23 18:01:03,359 INFO     *** No instances to display ***
+2018-05-23 18:01:03,464 INFO     Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image
+2018-05-23 18:01:03,544 INFO     Completed 1 image in 6.119843 sec
+2018-05-23 18:01:03,544 INFO     End
+2018-05-23 18:01:03,545 INFO     Counting 4 start
+2018-05-23 18:01:03,546 INFO     Date Time: 2018/05/23 18:01:03
+2018-05-23 18:01:03,546 INFO     Loading image: <DirEntry 'np_train (114).jpg'>
+2018-05-23 18:01:03,546 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:01:03,546 INFO     File name: np_train (114).jpg
+2018-05-23 18:01:03,546 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (114).jpg
+2018-05-23 18:01:03,563 INFO     Processing 1 images
+2018-05-23 18:01:03,564 INFO     image (600, 800, 3)
+2018-05-23 18:01:03,670 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:01:03,670 INFO     image_metas (1, 14)
+2018-05-23 18:01:03,670 INFO     anchors (1, 65472, 4)
+2018-05-23 18:01:10,082 INFO     Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image
+2018-05-23 18:01:10,290 INFO     Completed 1 image in 6.726519 sec
+2018-05-23 18:01:10,290 INFO     End
+2018-05-23 18:01:10,292 INFO     Counting 5 start
+2018-05-23 18:01:10,292 INFO     Date Time: 2018/05/23 18:01:10
+2018-05-23 18:01:10,292 INFO     Loading image: <DirEntry 'np_train (46).jpg'>
+2018-05-23 18:01:10,292 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:01:10,292 INFO     File name: np_train (46).jpg
+2018-05-23 18:01:10,292 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (46).jpg
+2018-05-23 18:01:10,312 INFO     Processing 1 images
+2018-05-23 18:01:10,312 INFO     image (600, 800, 3)
+2018-05-23 18:01:10,418 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:01:10,418 INFO     image_metas (1, 14)
+2018-05-23 18:01:10,418 INFO     anchors (1, 65472, 4)
+2018-05-23 18:01:17,465 INFO     Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image
+2018-05-23 18:01:17,688 INFO     Completed 1 image in 7.376358 sec
+2018-05-23 18:01:17,688 INFO     End
+2018-05-23 18:01:17,689 INFO     Counting 6 start
+2018-05-23 18:01:17,690 INFO     Date Time: 2018/05/23 18:01:17
+2018-05-23 18:01:17,690 INFO     Loading image: <DirEntry 'np_train (50).jpg'>
+2018-05-23 18:01:17,690 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:01:17,690 INFO     File name: np_train (50).jpg
+2018-05-23 18:01:17,690 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (50).jpg
+2018-05-23 18:01:17,709 INFO     Processing 1 images
+2018-05-23 18:01:17,709 INFO     image (600, 800, 3)
+2018-05-23 18:01:17,812 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:01:17,812 INFO     image_metas (1, 14)
+2018-05-23 18:01:17,813 INFO     anchors (1, 65472, 4)
+2018-05-23 18:01:24,153 INFO     Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image
+2018-05-23 18:01:24,299 INFO     Completed 1 image in 6.589245 sec
+2018-05-23 18:01:24,299 INFO     End
+2018-05-23 18:01:24,300 INFO     Counting 7 start
+2018-05-23 18:01:24,300 INFO     Date Time: 2018/05/23 18:01:24
+2018-05-23 18:01:24,300 INFO     Loading image: <DirEntry 'np_train (55).jpg'>
+2018-05-23 18:01:24,300 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:01:24,300 INFO     File name: np_train (55).jpg
+2018-05-23 18:01:24,300 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (55).jpg
+2018-05-23 18:01:24,311 INFO     Processing 1 images
+2018-05-23 18:01:24,311 INFO     image (600, 800, 3)
+2018-05-23 18:01:24,398 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:01:24,399 INFO     image_metas (1, 14)
+2018-05-23 18:01:24,399 INFO     anchors (1, 65472, 4)
+2018-05-23 18:01:31,483 INFO     Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image
+2018-05-23 18:01:31,753 INFO     Completed 1 image in 7.442063 sec
+2018-05-23 18:01:31,753 INFO     End
+2018-05-23 18:01:31,755 INFO     Counting 8 start
+2018-05-23 18:01:31,755 INFO     Date Time: 2018/05/23 18:01:31
+2018-05-23 18:01:31,755 INFO     Loading image: <DirEntry 'np_train (91).jpg'>
+2018-05-23 18:01:31,755 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:01:31,755 INFO     File name: np_train (91).jpg
+2018-05-23 18:01:31,756 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (91).jpg
+2018-05-23 18:01:31,777 INFO     Processing 1 images
+2018-05-23 18:01:31,777 INFO     image (600, 800, 3)
+2018-05-23 18:01:31,904 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:01:31,904 INFO     image_metas (1, 14)
+2018-05-23 18:01:31,904 INFO     anchors (1, 65472, 4)
+2018-05-23 18:01:38,447 INFO     Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image
+2018-05-23 18:01:38,758 INFO     Completed 1 image in 6.980909 sec
+2018-05-23 18:01:38,758 INFO     End
+2018-05-23 18:01:38,759 INFO     Counting 9 start
+2018-05-23 18:01:38,760 INFO     Date Time: 2018/05/23 18:01:38
+2018-05-23 18:01:38,760 INFO     Loading image: <DirEntry 'ê}1.jpg'>
+2018-05-23 18:01:38,760 INFO     Dir name: C:\Users\h-chou\Documents\Github\np_detect\images
+2018-05-23 18:01:38,760 INFO     File name: ê}1.jpg
+2018-05-23 18:01:38,761 INFO     Saved as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\ê}1.jpg
+2018-05-23 18:01:38,769 INFO     Processing 1 images
+2018-05-23 18:01:38,769 INFO     image (404, 539, 3)
+2018-05-23 18:01:38,866 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:01:38,866 INFO     image_metas (1, 14)
+2018-05-23 18:01:38,866 INFO     anchors (1, 65472, 4)
+2018-05-23 18:01:45,846 INFO     Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image
+2018-05-23 18:01:46,000 INFO     Completed 1 image in 7.232107 sec
+2018-05-23 18:01:46,000 INFO     End
+2018-05-23 18:01:46,001 INFO     FINISHING..................................
+2018-05-23 18:01:46,001 INFO     All image file masking completed.Batch ended at: 2018/05/23 18:01:46
+2018-05-23 18:10:16,858 INFO     ../weights/mask_rcnn_numberplate.h5 weights file loaded.
+2018-05-23 18:10:16,859 INFO     Counting 1 start
+2018-05-23 18:10:16,860 INFO     Date Time: 2018/05/23 18:10:16
+2018-05-23 18:10:16,860 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\3D-007.jpg
+2018-05-23 18:10:16,888 INFO     Processing 1 images
+2018-05-23 18:10:16,888 INFO     image (478, 640, 3)
+2018-05-23 18:10:16,966 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:10:16,966 INFO     image_metas (1, 14)
+2018-05-23 18:10:16,966 INFO     anchors (1, 65472, 4)
+2018-05-23 18:10:26,341 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\3D-007.jpg
+2018-05-23 18:10:26,342 INFO     Completed 1 image in 9.454320 sec
+2018-05-23 18:10:26,343 INFO     End
+2018-05-23 18:10:26,343 INFO     Counting 2 start
+2018-05-23 18:10:26,344 INFO     Date Time: 2018/05/23 18:10:26
+2018-05-23 18:10:26,345 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\58f02a79eda1d_193532217.jpg
+2018-05-23 18:10:26,357 INFO     Processing 1 images
+2018-05-23 18:10:26,357 INFO     image (391, 746, 3)
+2018-05-23 18:10:26,487 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:10:26,487 INFO     image_metas (1, 14)
+2018-05-23 18:10:26,488 INFO     anchors (1, 65472, 4)
+2018-05-23 18:10:34,129 INFO     Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image
+2018-05-23 18:10:34,299 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\58f02a79eda1d_193532217.jpg
+2018-05-23 18:10:34,300 INFO     Completed 1 image in 7.942150 sec
+2018-05-23 18:10:34,300 INFO     End
+2018-05-23 18:10:34,300 INFO     Counting 3 start
+2018-05-23 18:10:34,301 INFO     Date Time: 2018/05/23 18:10:34
+2018-05-23 18:10:34,301 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\fp02.jpg
+2018-05-23 18:10:34,309 INFO     Processing 1 images
+2018-05-23 18:10:34,310 INFO     image (408, 612, 3)
+2018-05-23 18:10:34,445 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:10:34,446 INFO     image_metas (1, 14)
+2018-05-23 18:10:34,446 INFO     anchors (1, 65472, 4)
+2018-05-23 18:10:41,425 INFO     *** No instances to display ***
+2018-05-23 18:10:41,617 INFO     Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image
+2018-05-23 18:10:41,717 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\fp02.jpg
+2018-05-23 18:10:41,717 INFO     Completed 1 image in 7.407662 sec
+2018-05-23 18:10:41,717 INFO     End
+2018-05-23 18:10:41,717 INFO     Counting 4 start
+2018-05-23 18:10:41,717 INFO     Date Time: 2018/05/23 18:10:41
+2018-05-23 18:10:41,718 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\np_train (114).jpg
+2018-05-23 18:10:41,730 INFO     Processing 1 images
+2018-05-23 18:10:41,730 INFO     image (600, 800, 3)
+2018-05-23 18:10:41,919 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:10:41,921 INFO     image_metas (1, 14)
+2018-05-23 18:10:41,922 INFO     anchors (1, 65472, 4)
+2018-05-23 18:10:49,782 INFO     Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image
+2018-05-23 18:10:49,942 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (114).jpg
+2018-05-23 18:10:49,942 INFO     Completed 1 image in 8.212124 sec
+2018-05-23 18:10:49,942 INFO     End
+2018-05-23 18:10:49,943 INFO     Counting 5 start
+2018-05-23 18:10:49,944 INFO     Date Time: 2018/05/23 18:10:49
+2018-05-23 18:10:49,944 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\np_train (46).jpg
+2018-05-23 18:10:49,958 INFO     Processing 1 images
+2018-05-23 18:10:49,959 INFO     image (600, 800, 3)
+2018-05-23 18:10:50,111 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:10:50,111 INFO     image_metas (1, 14)
+2018-05-23 18:10:50,111 INFO     anchors (1, 65472, 4)
+2018-05-23 18:10:57,143 INFO     Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image
+2018-05-23 18:10:57,310 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (46).jpg
+2018-05-23 18:10:57,310 INFO     Completed 1 image in 7.351613 sec
+2018-05-23 18:10:57,310 INFO     End
+2018-05-23 18:10:57,311 INFO     Counting 6 start
+2018-05-23 18:10:57,311 INFO     Date Time: 2018/05/23 18:10:57
+2018-05-23 18:10:57,311 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\np_train (50).jpg
+2018-05-23 18:10:57,323 INFO     Processing 1 images
+2018-05-23 18:10:57,323 INFO     image (600, 800, 3)
+2018-05-23 18:10:57,480 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:10:57,480 INFO     image_metas (1, 14)
+2018-05-23 18:10:57,481 INFO     anchors (1, 65472, 4)
+2018-05-23 18:11:05,046 INFO     Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image
+2018-05-23 18:11:05,185 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (50).jpg
+2018-05-23 18:11:05,185 INFO     Completed 1 image in 7.862956 sec
+2018-05-23 18:11:05,186 INFO     End
+2018-05-23 18:11:05,187 INFO     Counting 7 start
+2018-05-23 18:11:05,187 INFO     Date Time: 2018/05/23 18:11:05
+2018-05-23 18:11:05,187 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\np_train (55).jpg
+2018-05-23 18:11:05,207 INFO     Processing 1 images
+2018-05-23 18:11:05,208 INFO     image (600, 800, 3)
+2018-05-23 18:11:05,375 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:11:05,375 INFO     image_metas (1, 14)
+2018-05-23 18:11:05,375 INFO     anchors (1, 65472, 4)
+2018-05-23 18:11:13,159 INFO     Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image
+2018-05-23 18:11:13,427 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (55).jpg
+2018-05-23 18:11:13,427 INFO     Completed 1 image in 8.219465 sec
+2018-05-23 18:11:13,427 INFO     End
+2018-05-23 18:11:13,428 INFO     Counting 8 start
+2018-05-23 18:11:13,428 INFO     Date Time: 2018/05/23 18:11:13
+2018-05-23 18:11:13,428 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\np_train (91).jpg
+2018-05-23 18:11:13,450 INFO     Processing 1 images
+2018-05-23 18:11:13,450 INFO     image (600, 800, 3)
+2018-05-23 18:11:13,610 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:11:13,611 INFO     image_metas (1, 14)
+2018-05-23 18:11:13,611 INFO     anchors (1, 65472, 4)
+2018-05-23 18:11:21,979 INFO     Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image
+2018-05-23 18:11:22,289 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\np_train (91).jpg
+2018-05-23 18:11:22,289 INFO     Completed 1 image in 8.839215 sec
+2018-05-23 18:11:22,289 INFO     End
+2018-05-23 18:11:22,290 INFO     Counting 9 start
+2018-05-23 18:11:22,290 INFO     Date Time: 2018/05/23 18:11:22
+2018-05-23 18:11:22,290 INFO     Loading image: C:\Users\h-chou\Documents\Github\np_detect\images\ê}1.jpg
+2018-05-23 18:11:22,298 INFO     Processing 1 images
+2018-05-23 18:11:22,298 INFO     image (404, 539, 3)
+2018-05-23 18:11:22,443 INFO     molded_images (1, 512, 512, 3)
+2018-05-23 18:11:22,443 INFO     image_metas (1, 14)
+2018-05-23 18:11:22,444 INFO     anchors (1, 65472, 4)
+2018-05-23 18:11:29,934 INFO     Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image
+2018-05-23 18:11:30,026 INFO     Saved masked image as: C:\Users\h-chou\Documents\Github\np_detect\images\masked\ê}1.jpg
+2018-05-23 18:11:30,026 INFO     Completed 1 image in 7.728733 sec
+2018-05-23 18:11:30,026 INFO     End
+2018-05-23 18:11:30,027 INFO     FINISHING..................................
+2018-05-23 18:11:30,027 INFO     All image file masking completed. Batch ended at: 2018/05/23 18:11:30

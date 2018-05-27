@@ -26,6 +26,16 @@ python {name_of_the_sample_project}.py train --dataset=../../datasets/{name_of_t
 python calpis.py train --dataset=../../datasets/calpis --weights=last
 
 
+## train multiple class
+config.py num_class= 1+ ??? class number
+coco is 1+80
+calpis is 1+1
+
+https://github.com/matterport/Mask_RCNN/issues/372
+
+
+
+
 ## train oom问题
 修改config backbone=resnet50
 然后 pip install --ignore-installed --upgrade tensorflow-gpu==1.8.0 重新安装

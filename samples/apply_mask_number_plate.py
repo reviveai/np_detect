@@ -90,42 +90,33 @@ def apply_mask_to_image(config_name,weights_name):
 
                 # Filename and filepath log
                 filename = os.path.join(IMAGE_DIR, file_names)
-                logging.info('Loading image: %s', file_names)
-
-                base_file_name = os.path.basename(filename)
-                base_dir_name = os.path.dirname(filename)
-                logging.info('Dir name: %s',base_dir_name)
-                logging.info('File name: %s',base_file_name)
-                split_file_name, split_file_ext = os.path.splitext(base_file_name)
-                saved_dir_name = 'masked'
-                saved_file_name = str.join('\\', (base_dir_name, saved_dir_name, base_file_name))
-                logging.info('Saved as: %s',saved_file_name)
+                logging.info('Loading image: %s', filename)
 
                 # Convert png with alpha channel with shape[2] == 4 into shape[2] ==3 RGB images
                 image = skimage.io.imread(filename)
                 if len(image.shape) > 2 and image.shape[2] == 4:
                     image = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
 
-                # Processing time log
+                # Processing start time
                 t0 = time.perf_counter()
 
                 # Run detection
                 results = model.detect([image], verbose=1)
                 r = results[0]
 
-                # Without displaying images for batch program
-                ###logging.info_img = visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
-                ###skimage.io.imsave(saved_file_name,logging.info_img)
-
                 # Just apply mask then save images
-                logging.info_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
-                skimage.io.imsave(saved_file_name,logging.info_img)
+                base_file_name = os.path.basename(filename)
+                base_dir_name = os.path.dirname(filename)
+                saved_dir_name = 'masked'
+                saved_file_name = str.join('\\', (base_dir_name, saved_dir_name, base_file_name))
+                print_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
+                skimage.io.imsave(saved_file_name,print_img)
+                logging.info('Saved masked image as: %s',saved_file_name)
 
-                # Processing time log
+                # Processing ending time
                 t1 = time.perf_counter()
                 logging.info('Completed 1 image in %f sec',(t1-t0))
                 logging.info('End')
-                # End
     return True
 
 ############################################################
@@ -135,7 +126,7 @@ def apply_mask_to_image(config_name,weights_name):
 ############################################################
 if __name__ == '__main__':
     # Logging confg
-    logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+    logging.basicConfig(level=logging.DEBUG, filename="../batch_logs/log", filemode="a+",
                     format="%(asctime)-15s %(levelname)-8s %(message)s")
 
     # Parse command line arguments
@@ -159,7 +150,7 @@ if __name__ == '__main__':
         date_string = str.join('/',(str(result_timestamp.tm_year), str(result_timestamp.tm_mon).zfill(2), str(result_timestamp.tm_mday).zfill(2)))
         time_string = str.join(':',(str(result_timestamp.tm_hour).zfill(2),str(result_timestamp.tm_min).zfill(2),str(result_timestamp.tm_sec).zfill(2)))
         logging.info('FINISHING..................................')
-        logging.info('All image file masking completed.Batch ended at: %s %s', date_string, time_string)
+        logging.info('All image file masking completed. Batch ended at: %s %s', date_string, time_string)
     else:
         logging.info('FINISHING..................................')
         logging.exception('Batch ended with exception. Please check logs.')
