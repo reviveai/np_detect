@@ -25,19 +25,13 @@ ROOT_DIR = os.path.abspath("../")
 
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
-from mrcnn import utils
-from mrcnn import visualize
-from mrcnn.visualize import display_images
-import mrcnn.model as modellib
-from mrcnn.model import log
-from samples.numberplate import numberplate
+
 
 # Directory to save logs and trained model
 MODEL_DIR = os.path.join(ROOT_DIR, "logs")
 IMAGE_DIR = os.path.join(ROOT_DIR, "images")
 
-# Path to pre-trained weights
-NUMBERPLATE_WEIGHTS_PATH = "../weights/"
+
 
 
 ############################################################
@@ -66,18 +60,12 @@ if __name__ == "__main__":
                 # Filename and filepath log
                 filename = os.path.join(IMAGE_DIR, file_names)
 
-                results = manager.run_detect(filename)
-                r = results[0]
+                r = manager.run_detect(filename)
+                print(r)
 
                 # Without displaying images for batch program
                 ###logging.info_img = visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
                 ###skimage.io.imsave(saved_file_name,logging.info_img)
-
-                # Just apply mask then save images
-                logging.info_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
-                skimage.io.imsave(saved_file_name,logging.info_img)
-
-                # Processing time log
-                t1 = time.perf_counter()
+                                
                 print('End')
                 # End

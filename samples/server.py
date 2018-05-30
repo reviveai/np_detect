@@ -46,7 +46,7 @@ NUMBERPLATE_WEIGHTS_PATH = "../weights/"
 
 manager = TFManager(address=('127.0.0.1', 50000), authkey='hello'.encode('UTF-8'))
 
-def run_detect(filename):    
+def run_detect(filename):
 
     base_file_name = os.path.basename(filename)
     base_dir_name = os.path.dirname(filename)
@@ -62,12 +62,15 @@ def run_detect(filename):
     if len(image.shape) > 2 and image.shape[2] == 4:
         image = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
 
-    # Processing time log
-    t0 = time.perf_counter()
-
     # Run detection
     results = model.detect([image], verbose=1)
-    return results
+    r= results[0]
+
+    # Just apply mask then save images
+    print_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
+    skimage.io.imsave(saved_file_name,print_img)
+
+    return True
 
 TFManager.register("run_detect", run_detect)
 
@@ -87,6 +90,11 @@ if __name__ == "__main__":
     # Load pre-trained weights
     NUMBERPLATE_WEIGHTS_FILE = os.path.join(NUMBERPLATE_WEIGHTS_PATH, "mask_rcnn_numberplate.h5")
     model.load_weights(NUMBERPLATE_WEIGHTS_FILE, by_name=True)
+
+    # VERY VERY IMPORTANT
+    # https://github.com/matterport/Mask_RCNN/issues/600#issuecomment-393142704
+    model.keras_model._make_predict_function()
+
     print('Weights file loaded.')
 
     server = manager.get_server()
