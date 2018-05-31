@@ -38,9 +38,11 @@ import mrcnn.model as modellib
 from mrcnn.model import log
 from samples.numberplate import numberplate
 
-# Directory to save logs and trained model
-MODEL_DIR = os.path.join(ROOT_DIR, "logs")
-IMAGE_DIR = os.path.join(ROOT_DIR, "images")
+# Directories
+MODEL_DIR = os.path.join(ROOT_DIR, "logs")      #logs
+IMAGE_DIR = os.path.join(ROOT_DIR, "images")    #images root folder
+MASKED_DIR = os.path.join(IMAGE_DIR, "masked")  #masked images folder
+UPLOAD_DIR = os.path.join(IMAGE_DIR, "upload")  #uploaed images folder
 
 # Path to pre-trained weights
 NUMBERPLATE_WEIGHTS_PATH = "../weights/"
@@ -57,7 +59,7 @@ class InferenceConfig(numberplate.NumberPlateConfig):
     IMAGES_PER_GPU = 1
     IMAGE_RESIZE_MODE = "square"
     IMAGE_MIN_DIM = 512
-    IMAGE_MAX_DIM = 512
+    IMAGE_MAX_DIM = 576
 
 config = InferenceConfig()
 config.display()
@@ -83,11 +85,16 @@ print('Weights file loaded.')
 
 def run_detect(filename):
 
+    """
     base_file_name = os.path.basename(filename)
     base_dir_name = os.path.dirname(filename)
     split_file_name, split_file_ext = os.path.splitext(base_file_name)
     saved_dir_name = 'masked'
     saved_file_name = str.join('\\', (base_dir_name, saved_dir_name, base_file_name))
+    """
+
+    base_file_name = os.path.basename(filename)
+    saved_file_name = os.path.join(MASKED_DIR, base_file_name)
 
     # Convert png with alpha channel with shape[2] == 4 into shape[2] ==3 RGB images
     image = skimage.io.imread(filename)
@@ -99,7 +106,7 @@ def run_detect(filename):
     r= results[0]
 
     # Just apply mask then save images
-    print_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
+    print_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'],None,None,None,None,None,[(1.0,1.0,1.0)])
     skimage.io.imsave(saved_file_name,print_img)
 
     return True
@@ -108,17 +115,50 @@ def run_detect(filename):
 # Instantiate the Node
 app = Flask(__name__)
 
+@app.route('/applyMask', methods=['GET','POST'])
+def apply_mask_get():
 
-@app.route('/mine', methods=['GET'])
-def mine():
-    filename = os.path.join(IMAGE_DIR, 'np_train (46).jpg')
+    # Validation images extension
+    image_type_ok_list = ['jpeg','png','gif','bmp']
 
-    r = run_detect(filename)
+    if request.method == 'GET':
 
-    response = {
-        'message': "done",
-    }
-    return jsonify(response), 200
+        image_name = request.args.get('image', default = '*', type = str)
+        full_filename = os.path.join(IMAGE_DIR, image_name)
+        image_type = imghdr.what(full_filename)
+
+        if image_type in image_type_ok_list:
+            r = run_detect(full_filename)
+            response_msg = "Done. Applied mask into 1 image '%s'" % full_filename
+            response = {
+                'message': response_msg
+            }
+            return jsonify(response), 200
+        else:
+            response = {
+                'message': "Invalid image type.(Allowed image type: JPEG, PNG, GIF, BMP)"
+            }
+            return jsonify(response), 400
+
+    if request.method == 'POST':
+
+        if 'file' not in request.files:
+            response = {
+                'message': "No file uploaded within the POST body."
+            }
+            return jsonify(response), 400
+
+        uploaded_file = request.files['file']
+        full_filename = os.path.join(UPLOAD_DIR, uploaded_file.filename)
+        uploaded_file.save(full_filename)
+
+        result = run_detect(full_filename)
+
+        response_msg = "Done. Applied mask into 1 image '%s'" % full_filename
+        response = {
+            'message': response_msg
+        }
+        return jsonify(response), 200
 
 
 if __name__ == '__main__':
