@@ -207,7 +207,9 @@ def apply_mask_instances(image, boxes, masks, class_ids, class_names,
     #    auto_show = True
 
     # Generate random colors
-    colors = colors or random_colors(N)
+    # colors = colors or random_colors(N)
+    colors = colors
+
 
     # Show area outside image boundaries.
     height, width = image.shape[:2]
@@ -218,7 +220,7 @@ def apply_mask_instances(image, boxes, masks, class_ids, class_names,
 
     masked_image = image.astype(np.uint32).copy()
     for i in range(N):
-        color = colors[i]
+        color = colors[0]
 
         # Mask
         mask = masks[:, :, i]

@@ -1,0 +1,124 @@
+2018-05-27 18:39:58,463 INFO     mask_rcnn_numberplate.h5 weights file loaded.
+2018-05-27 18:39:58,464 INFO     Counting 1 start
+2018-05-27 18:39:58,464 INFO     Date Time: 2018/05/27 18:39:58
+2018-05-27 18:39:58,464 INFO     Loading image: <DirEntry '3D-007.jpg'>
+2018-05-27 18:39:58,465 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:39:58,466 INFO     File name: 3D-007.jpg
+2018-05-27 18:39:58,466 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\3D-007.jpg
+2018-05-27 18:39:58,495 INFO     Processing 1 images
+2018-05-27 18:39:58,495 INFO     image (478, 640, 3)
+2018-05-27 18:39:58,566 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:39:58,566 INFO     image_metas (1, 14)
+2018-05-27 18:39:58,566 INFO     anchors (1, 65472, 4)
+2018-05-27 18:40:44,092 INFO     mask_rcnn_numberplate.h5 weights file loaded.
+2018-05-27 18:40:44,093 INFO     Counting 1 start
+2018-05-27 18:40:44,093 INFO     Date Time: 2018/05/27 18:40:44
+2018-05-27 18:40:44,093 INFO     Loading image: <DirEntry '3D-007.jpg'>
+2018-05-27 18:40:44,094 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:40:44,095 INFO     File name: 3D-007.jpg
+2018-05-27 18:40:44,095 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\3D-007.jpg
+2018-05-27 18:40:44,125 INFO     Processing 1 images
+2018-05-27 18:40:44,125 INFO     image (478, 640, 3)
+2018-05-27 18:40:44,194 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:40:44,195 INFO     image_metas (1, 14)
+2018-05-27 18:40:44,195 INFO     anchors (1, 65472, 4)
+2018-05-27 18:40:47,687 INFO     Completed 1 image in 3.562622 sec
+2018-05-27 18:40:47,688 INFO     End
+2018-05-27 18:40:47,689 INFO     Counting 2 start
+2018-05-27 18:40:47,689 INFO     Date Time: 2018/05/27 18:40:47
+2018-05-27 18:40:47,689 INFO     Loading image: <DirEntry '58f02a79eda1d_193532217.jpg'>
+2018-05-27 18:40:47,689 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:40:47,689 INFO     File name: 58f02a79eda1d_193532217.jpg
+2018-05-27 18:40:47,689 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\58f02a79eda1d_193532217.jpg
+2018-05-27 18:40:47,695 INFO     Processing 1 images
+2018-05-27 18:40:47,695 INFO     image (391, 746, 3)
+2018-05-27 18:40:47,747 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:40:47,747 INFO     image_metas (1, 14)
+2018-05-27 18:40:47,747 INFO     anchors (1, 65472, 4)
+2018-05-27 18:40:48,211 INFO     Completed 1 image in 0.515341 sec
+2018-05-27 18:40:48,211 INFO     End
+2018-05-27 18:40:48,212 INFO     Counting 3 start
+2018-05-27 18:40:48,212 INFO     Date Time: 2018/05/27 18:40:48
+2018-05-27 18:40:48,212 INFO     Loading image: <DirEntry 'fp02.jpg'>
+2018-05-27 18:40:48,212 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:40:48,212 INFO     File name: fp02.jpg
+2018-05-27 18:40:48,212 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\fp02.jpg
+2018-05-27 18:40:48,216 INFO     Processing 1 images
+2018-05-27 18:40:48,216 INFO     image (408, 612, 3)
+2018-05-27 18:40:48,285 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:40:48,285 INFO     image_metas (1, 14)
+2018-05-27 18:40:48,285 INFO     anchors (1, 65472, 4)
+2018-05-27 18:40:48,529 INFO     *** No instances to display ***
+2018-05-27 18:40:48,572 INFO     Completed 1 image in 0.356869 sec
+2018-05-27 18:40:48,572 INFO     End
+2018-05-27 18:40:48,573 INFO     Counting 4 start
+2018-05-27 18:40:48,574 INFO     Date Time: 2018/05/27 18:40:48
+2018-05-27 18:40:48,574 INFO     Loading image: <DirEntry 'np_train (46).jpg'>
+2018-05-27 18:40:48,574 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:40:48,574 INFO     File name: np_train (46).jpg
+2018-05-27 18:40:48,574 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\np_train (46).jpg
+2018-05-27 18:40:48,583 INFO     Processing 1 images
+2018-05-27 18:40:48,584 INFO     image (600, 800, 3)
+2018-05-27 18:40:48,653 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:40:48,653 INFO     image_metas (1, 14)
+2018-05-27 18:40:48,653 INFO     anchors (1, 65472, 4)
+2018-05-27 18:40:49,144 INFO     Completed 1 image in 0.560497 sec
+2018-05-27 18:40:49,144 INFO     End
+2018-05-27 18:40:49,145 INFO     FINISHING..................................
+2018-05-27 18:40:49,145 INFO     All image file masking completed.Batch ended at: 2018/05/27 18:40:49
+2018-05-27 18:41:16,692 INFO     mask_rcnn_numberplate.h5 weights file loaded.
+2018-05-27 18:41:16,693 INFO     Counting 1 start
+2018-05-27 18:41:16,693 INFO     Date Time: 2018/05/27 18:41:16
+2018-05-27 18:41:16,693 INFO     Loading image: <DirEntry '3D-007.jpg'>
+2018-05-27 18:41:16,694 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:41:16,694 INFO     File name: 3D-007.jpg
+2018-05-27 18:41:16,695 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\3D-007.jpg
+2018-05-27 18:41:16,723 INFO     Processing 1 images
+2018-05-27 18:41:16,723 INFO     image (478, 640, 3)
+2018-05-27 18:41:16,794 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:41:16,794 INFO     image_metas (1, 14)
+2018-05-27 18:41:16,794 INFO     anchors (1, 65472, 4)
+2018-05-27 18:41:20,043 INFO     Completed 1 image in 3.319258 sec
+2018-05-27 18:41:20,044 INFO     End
+2018-05-27 18:41:20,045 INFO     Counting 2 start
+2018-05-27 18:41:20,045 INFO     Date Time: 2018/05/27 18:41:20
+2018-05-27 18:41:20,045 INFO     Loading image: <DirEntry '58f02a79eda1d_193532217.jpg'>
+2018-05-27 18:41:20,045 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:41:20,045 INFO     File name: 58f02a79eda1d_193532217.jpg
+2018-05-27 18:41:20,045 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\58f02a79eda1d_193532217.jpg
+2018-05-27 18:41:20,051 INFO     Processing 1 images
+2018-05-27 18:41:20,051 INFO     image (391, 746, 3)
+2018-05-27 18:41:20,106 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:41:20,106 INFO     image_metas (1, 14)
+2018-05-27 18:41:20,106 INFO     anchors (1, 65472, 4)
+2018-05-27 18:41:20,566 INFO     Completed 1 image in 0.515390 sec
+2018-05-27 18:41:20,566 INFO     End
+2018-05-27 18:41:20,567 INFO     Counting 3 start
+2018-05-27 18:41:20,567 INFO     Date Time: 2018/05/27 18:41:20
+2018-05-27 18:41:20,567 INFO     Loading image: <DirEntry 'fp02.jpg'>
+2018-05-27 18:41:20,567 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:41:20,567 INFO     File name: fp02.jpg
+2018-05-27 18:41:20,567 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\fp02.jpg
+2018-05-27 18:41:20,571 INFO     Processing 1 images
+2018-05-27 18:41:20,571 INFO     image (408, 612, 3)
+2018-05-27 18:41:20,629 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:41:20,630 INFO     image_metas (1, 14)
+2018-05-27 18:41:20,630 INFO     anchors (1, 65472, 4)
+2018-05-27 18:41:20,875 INFO     *** No instances to display ***
+2018-05-27 18:41:20,916 INFO     Completed 1 image in 0.344621 sec
+2018-05-27 18:41:20,917 INFO     End
+2018-05-27 18:41:20,918 INFO     Counting 4 start
+2018-05-27 18:41:20,918 INFO     Date Time: 2018/05/27 18:41:20
+2018-05-27 18:41:20,918 INFO     Loading image: <DirEntry 'np_train (46).jpg'>
+2018-05-27 18:41:20,918 INFO     Dir name: M:\Git\TensorFlow Git\np_detect\images
+2018-05-27 18:41:20,918 INFO     File name: np_train (46).jpg
+2018-05-27 18:41:20,918 INFO     Saved as: M:\Git\TensorFlow Git\np_detect\images\masked\np_train (46).jpg
+2018-05-27 18:41:20,928 INFO     Processing 1 images
+2018-05-27 18:41:20,928 INFO     image (600, 800, 3)
+2018-05-27 18:41:20,996 INFO     molded_images (1, 512, 512, 3)
+2018-05-27 18:41:20,996 INFO     image_metas (1, 14)
+2018-05-27 18:41:20,996 INFO     anchors (1, 65472, 4)
+2018-05-27 18:41:21,508 INFO     Completed 1 image in 0.580772 sec
+2018-05-27 18:41:21,508 INFO     End
+2018-05-27 18:41:21,509 INFO     FINISHING..................................
+2018-05-27 18:41:21,509 INFO     All image file masking completed.Batch ended at: 2018/05/27 18:41:21
