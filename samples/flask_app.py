@@ -49,7 +49,7 @@ NUMBERPLATE_WEIGHTS_PATH = "../weights/"
 
 ############################################################
 #  Configurations
-#  inherits from config.py
+#  Inherits from config.py
 ############################################################
 
 class InferenceConfig(numberplate.NumberPlateConfig):
@@ -76,38 +76,33 @@ model = modellib.MaskRCNN(mode="inference", model_dir=MODEL_DIR, config=config)
 NUMBERPLATE_WEIGHTS_FILE = os.path.join(NUMBERPLATE_WEIGHTS_PATH, "mask_rcnn_numberplate.h5")
 model.load_weights(NUMBERPLATE_WEIGHTS_FILE, by_name=True)
 
-# VERY VERY IMPORTANT
+# VERY VERY IMPORTANT to pre load inference
 # https://github.com/matterport/Mask_RCNN/issues/600#issuecomment-393142704
 model.keras_model._make_predict_function()
 
-print('Weights file loaded.')
+logging.info('Model and weight have been loaded.')
 
 
 def run_detect(filename):
-
-    """
-    base_file_name = os.path.basename(filename)
-    base_dir_name = os.path.dirname(filename)
-    split_file_name, split_file_ext = os.path.splitext(base_file_name)
-    saved_dir_name = 'masked'
-    saved_file_name = str.join('\\', (base_dir_name, saved_dir_name, base_file_name))
-    """
-
     base_file_name = os.path.basename(filename)
     saved_file_name = os.path.join(MASKED_DIR, base_file_name)
+    logging.info('Loading image: %s', base_file_name)
 
     # Convert png with alpha channel with shape[2] == 4 into shape[2] ==3 RGB images
     image = skimage.io.imread(filename)
     if len(image.shape) > 2 and image.shape[2] == 4:
         image = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
+    logging.info('Image info: %s', image)
 
     # Run detection
     results = model.detect([image], verbose=1)
     r= results[0]
+    logging.info('Runing model.detect([image], verbose=1).')
 
     # Just apply mask then save images
     print_img = visualize.apply_mask_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'],None,None,None,None,None,[(1.0,1.0,1.0)])
     skimage.io.imsave(saved_file_name,print_img)
+    logging.info('Finished apply_mask_instances.')
 
     return True
 
@@ -162,8 +157,11 @@ def apply_mask_get():
 
 
 if __name__ == '__main__':
-    from argparse import ArgumentParser
+    # Logging confg
+    logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 
+    from argparse import ArgumentParser
     parser = ArgumentParser()
     parser.add_argument('-p', '--port', default=5000, type=int, help='port to listen on')
     args = parser.parse_args()
