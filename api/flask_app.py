@@ -86,7 +86,7 @@ model.keras_model._make_predict_function()
 
 logging.info('Model and weight have been loaded.')
 
-
+# Run inference detection by parsing image filename
 def run_detect(filename):
     base_file_name = os.path.basename(filename)
     saved_file_name = os.path.join(MASKED_DIR, base_file_name)
